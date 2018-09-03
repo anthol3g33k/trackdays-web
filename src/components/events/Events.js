@@ -1,54 +1,47 @@
 import React, { Component } from 'react';
-import './App.css';
+import EventsAPI from './EventsAPI'
 
 class Events extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      error: null,
-      isLoaded: false,
-      items: []
+      events: [],
+      isLoading: false
     };
   }
 
   componentDidMount() {
-      fetch("https://trackdays-api.herokuapp.com/events")
-        .then(res => res.json())
-        .then(
-          (result) => {
-            this.setState({
-              isLoaded: true,
-              items: result
-            });
-          },
-          // Note: it's important to handle errors here
-          // instead of a catch() block so that we don't swallow
-          // exceptions from actual bugs in components.
-          (error) => {
-            this.setState({
-              isLoaded: true,
-              error
-            });
-          }
-        )
-    }
-
+    this.setState({ isLoading: true });
+    EventsAPI.all()
+      .then(data => this.setState({ events: data, isLoading: false }));
+  }
 
   render() {
+    const { events, isLoading } = this.state;
+
+    if (isLoading) {
+        return <p>Loading ...</p>;
+      }
+
     return (
-      <div className="App">
-        <p>Events</p>
-        <ul>
-          {items.map(item => (
-            <li key={item.name}>
-              {item.name} {item.price}
-            </li>
-          ))}
-        </ul>
-        <p><Button color="danger">Danger!</Button></p>
-      </div>
-    );
+      <section className="bg-secondary" id="about">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 mx-auto text-center">
+              <h2 className="section-heading text-white">Evénements:</h2>
+              <h3>
+                {
+                  events.map(event =>
+                    <li>{ event.name }</li>
+                  )
+                }
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+    )
   }
 }
 
-export default App;
+export default Events
