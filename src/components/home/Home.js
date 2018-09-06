@@ -14,7 +14,7 @@ class Home extends Component {
                 <hr/>
               </div>
               <div className="col-lg-8 mx-auto">
-                <p className="text-faded mb-5">Vous trouverez ici l\'ensemble des trackdays de nos partenaires. Inscrivez-vous dès aujourd\'hui à un événement, participez, cumulez des points et retrouvez vos photos!</p>
+                <p className="text-faded mb-5">Vous trouverez ici l'ensemble des trackdays de nos partenaires. Inscrivez-vous dès aujourd'hui à un événement, participez, cumulez des points et retrouvez vos photos!</p>
                 <a className="btn btn-primary btn-xl js-scroll-trigger" href="">Trouver un événement</a>
               </div>
             </div>
@@ -27,7 +27,7 @@ class Home extends Component {
               <div className="col-lg-8 mx-auto text-center">
                 <h2 className="section-heading text-white">Inscrivez-vous!</h2>
                 <hr className="light my-4"/>
-                <p className="text-faded mb-4">Créez votre comtpe et accédez à votre espace personnel pour profiter de l\'ensemble des services.</p>
+                <p className="text-faded mb-4">Créez votre comtpe et accédez à votre espace personnel pour profiter de l'ensemble des services.</p>
                 <a className="btn btn-light btn-xl js-scroll-trigger" href="">Inscription</a>
               </div>
             </div>
@@ -49,14 +49,14 @@ class Home extends Component {
                 <div className="service-box mt-5 mx-auto">
                   <i className="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
                   <h3 className="mb-3">Réservez votre place</h3>
-                  <p className="text-muted mb-0">Bénéficiez d\'avantages en réservant votre place à l\'avance</p>
+                  <p className="text-muted mb-0">Bénéficiez d'avantages en réservant votre place à l'avance</p>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 text-center">
                 <div className="service-box mt-5 mx-auto">
                   <i className="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
                   <h3 className="mb-3">Amusez vous sur la piste</h3>
-                  <p className="text-muted mb-0">Profitez de l\'asphalte, nous nous occupons du reste</p>
+                  <p className="text-muted mb-0">Profitez de l'asphalte, nous nous occupons du reste</p>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 text-center">
